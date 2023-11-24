@@ -69,60 +69,83 @@ export function App() {
 
 	return (
 		<Layout title="">
-			<div className="flex flex-col-reverse gap-8 md:flex-row">
-				<div className="flex w-full flex-col gap-4 p-4 md:w-2/3 md:p-12">
-					<p>
-						While <i>Prompts with Friends</i> is a mere showcase of the{' '}
-						<a
-							className="text-blue-700 underline visited:text-purple-600 hover:text-rose-600"
-							href="https://b2bsaaskit.com"
-						>
-							B2B SaaS Kit
-						</a>
-						, our goal was to make it genuinely useful.
-					</p>
-					<p>
-						As it happens, this project started off as the obligatory collaborative note-taking app,
-						but in the process our attention quickly turned to GPT prompt-building.
-					</p>
-					<div>
-						What if we came up with a sensible way for teams to work on complex prompts? For
-						example, what if it was easy to do things like
-						<ul className="ml-4 mt-4">
-							<li>- Set system messages</li>
-							<li>- Generate and regenerate AI responses at any point</li>
-							<li>- Share prompts with friends or the world</li>
-							<li>- Fork prompts</li>
-							<li>- Like prompts</li>
-						</ul>
+			<main className="bg-white">
+				<div className="relative md:flex">
+					{/* Content */}
+					<div className="md:w-1/2">
+						<div className="min-h-screen h-full flex flex-col after:flex-1">
+							{/* Header */}
+							<div className="flex-1">
+								<div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+									{/* Logo */}
+									<Link className="block" to="/">
+										<svg width="32" height="32" viewBox="0 0 32 32">
+											<defs>
+												<linearGradient
+													x1="28.538%"
+													y1="20.229%"
+													x2="100%"
+													y2="108.156%"
+													id="logo-a"
+												>
+													<stop stopColor="#A5B4FC" stopOpacity="0" offset="0%" />
+													<stop stopColor="#A5B4FC" offset="100%" />
+												</linearGradient>
+												<linearGradient x1="88.638%" y1="29.267%" x2="22.42%" y2="100%" id="logo-b">
+													<stop stopColor="#38BDF8" stopOpacity="0" offset="0%" />
+													<stop stopColor="#38BDF8" offset="100%" />
+												</linearGradient>
+											</defs>
+											<rect fill="#6366F1" width="32" height="32" rx="16" />
+											<path
+												d="M18.277.16C26.035 1.267 32 7.938 32 16c0 8.837-7.163 16-16 16a15.937 15.937 0 01-10.426-3.863L18.277.161z"
+												fill="#4F46E5"
+											/>
+											<path
+												d="M7.404 2.503l18.339 26.19A15.93 15.93 0 0116 32C7.163 32 0 24.837 0 16 0 10.327 2.952 5.344 7.404 2.503z"
+												fill="url(#logo-a)"
+											/>
+											<path
+												d="M2.223 24.14L29.777 7.86A15.926 15.926 0 0132 16c0 8.837-7.163 16-16 16-5.864 0-10.991-3.154-13.777-7.86z"
+												fill="url(#logo-b)"
+											/>
+										</svg>
+									</Link>
+								</div>
+							</div>
+
+							<div className="max-w-sm mx-auto px-4 py-8">
+								<h1 className="text-3xl text-slate-800 font-bold mb-6">
+									Start for free with HR-wizard ✨
+								</h1>
+								{/* Form */}
+								<AppWithOrg />
+
+								{/* Footer */}
+								{/* <div className="pt-5 mt-6 border-t border-slate-200">
+                <div className="text-sm">
+                  Have an account? <Link className="font-medium text-indigo-500 hover:text-indigo-600" to="/signin">Sign In</Link>
+                </div>
+              </div> */}
+							</div>
+						</div>
 					</div>
-					<p>
-						Roughly, that's what we've got for you here. To give it a go, start by{' '}
-						<Link
-							to="/app/prompts/create"
-							type="button"
-							className="text-blue-700 underline visited:text-purple-600 hover:text-rose-600"
-						>
-							creating a prompt
-						</Link>
-						. If you run into any issues,{' '}
-						<Link
-							to="/app/support"
-							type="button"
-							className="text-blue-700 underline visited:text-purple-600 hover:text-rose-600"
-						>
-							ping us in support
-						</Link>
-						.
-					</p>
-					<p>Enjoy!</p>
-				</div>
-				<div className="flex w-full items-center justify-center md:w-1/3">
-					<div className="flex flex-col">
-						<AppWithOrg />
+
+					{/* Image */}
+					<div
+						className="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2"
+						aria-hidden="true"
+					>
+						<img
+							className="object-cover object-center w-full h-full"
+							src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							width="760"
+							height="1024"
+							alt="Authentication"
+						/>
 					</div>
 				</div>
-			</div>
+			</main>
 		</Layout>
 	);
 }
@@ -162,12 +185,12 @@ const AppWithOrg = () => {
 				)}
 				<div className="mt-4 text-center">
 					<NavLink
-						to="/app/prompts"
+						to="/app/dashboard"
 						className={({ isPending }) =>
 							clsx('rounded  px-4 py-2 text-white', isPending ? 'bg-indigo-600' : 'bg-indigo-500')
 						}
 					>
-						View prompts
+						Go to dashboard
 					</NavLink>
 				</div>
 			</>

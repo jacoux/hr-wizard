@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "doppler run yarn dev",
     "build": "astro build",
     "full:check": "yarn fix && yarn ci:check && doppler run --config prd yarn build",
     "ci:check": "astro check && tsc --noEmit",

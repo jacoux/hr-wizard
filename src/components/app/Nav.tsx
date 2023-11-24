@@ -11,12 +11,13 @@ import {
 	useRequireActiveOrg,
 } from '../propelauth';
 
-export function AppNav() {
+export function AppNav(this: any) {
 	const menuRef = useRef<HTMLDivElement>(null);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const { auth, activeOrg } = useRequireActiveOrg();
 	const { redirectToOrgPage, redirectToAccountPage } = useRedirectFunctions();
 	const user = auth.loading === false ? auth.user : undefined;
+	console.log(user);
 	const defaultUrl = 'https://img.propelauth.com/2a27d237-db8c-4f82-84fb-5824dfaedc87.png';
 	const pictureUrl = user?.pictureUrl || defaultUrl;
 	const logout = useLogoutFunction();
@@ -56,21 +57,29 @@ export function AppNav() {
 	return (
 		<header className="bg-white px-5 py-4 shadow-sm">
 			<div className="container mx-auto flex items-center justify-between text-xs sm:text-sm">
-				<nav className="flex flex-wrap space-x-2 sm:space-x-4">
-					<NavLink to="/app" end className={navLinkClass}>
-						Overview
-					</NavLink>
-					<NavLink to="/app/prompts" className={navLinkClass}>
-						Prompts
-					</NavLink>
-					<NavLink to="/app/settings" className={navLinkClass}>
-						Settings
-					</NavLink>
-					<NavLink to="/app/support" className={navLinkClassSupport}>
-						Support
-						{path !== '/app/support' && <SupportWidget kind="badge" />}
-					</NavLink>
-				</nav>
+				{user?.email ? (
+					<nav className="flex flex-wrap space-x-2 sm:space-x-4">
+						<NavLink to="/app" end className={navLinkClass}>
+							Overview
+						</NavLink>
+						<NavLink to="/app/prompts" className={navLinkClass}>
+							Prompts
+						</NavLink>
+						<NavLink to="/app/settings" className={navLinkClass}>
+							Settings
+						</NavLink>
+						<NavLink to="/app/support" className={navLinkClassSupport}>
+							Support
+							{path !== '/app/support' && <SupportWidget kind="badge" />}
+						</NavLink>
+					</nav>
+				) : (
+					<nav className="flex flex-wrap space-x-2 sm:space-x-4">
+						<NavLink to="/login" end className={navLinkClass}>
+							login
+						</NavLink>
+					</nav>
+				)}
 				<div className="relative inline-block text-left" ref={menuRef}>
 					<button
 						className="flex items-center rounded-full"
