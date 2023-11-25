@@ -11,7 +11,7 @@ export default defineConfig({
 		functionPerRoute: false,
 	}),
 	// eslint-disable-next-line no-undef
-	site: process.env.SITE_URL,
+	site: "hr-wizard-cwashcx7u-jacobsniels10.vercel.app",
 	vite: {
 		plugins: [
 			checker({
