@@ -1,110 +1,296 @@
 ---
-import b2b7logo from '../../assets/b2b7.svg?url';
 import { websiteTitle } from '../../constants';
 import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title={'Set up your own ' + websiteTitle}>
-	<main class="container max-w-[40rem] px-8 pb-12 md:mx-auto md:px-0">
-		<div class="mt-28 flex items-center gap-6">
-			<div class="w-[5.75rem]">
-				<img class="h-[5.75rem] w-[5.75rem]" src={b2b7logo} alt="B2B7 Logo" />
-			</div>
-			<div class="flex flex-col">
-				<span class="text-[1.75rem]">Set up your own</span>
-				<span class="text-4xl">Prompts with Friends</span>
-			</div>
-		</div>
+<div class="cards">
 
-		<div class="ml-0 mt-16 text-[1.75rem] leading-8 md:ml-[7.25rem]">Developer friend, hello!</div>
+	<article class="information [ card ]">
+		<span class="tag">HR wizard</span>
+		<h2 class="title">The best applicant system</h2>
+		<p class="info">Create unlimited jobs, connect with your own site and view unlimited candidates.</p>
+		<button class="button">
+			<span>Learn more</span>
+			<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+				<path d="M0 0h24v24H0V0z" fill="none" />
+				<path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+			</svg>
+		</button>
+	</article>
+	<article class="plan [ card ]">
+		<div class="inner">
 
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			This is your development copy of <a href="https://promptswithfriends.com/"
-				>PromptsWithFriends.com</a
-			>, designed to showcase the <a href="https://b2bsaaskit.com/">B2B Saas Kit</a>.
-		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			<div>Getting started:</div>
-			<ol class="ml-7 list-decimal text-blue-600">
+			<span class="pricing">
+				<span>
+					$56 <small>/ m</small>
+				</span>
+			</span>
+			<h2 class="title">Professional</h2>
+			<p class="info">This plan is for those who have a team already and running a large business.</p>
+			<ul class="features">
 				<li>
-					<a href="/setup">Configure Prompts with Friends on your machine 👈</a>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z" />
+							<path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
+						</svg>
+					</span>
+					<span><strong>20</strong> team members</span>
 				</li>
 				<li>
-					<a href="/app">Try Prompts with Friends on your machine</a>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z" />
+							<path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
+						</svg>
+					</span>
+					<span>Plan <strong>team meetings</strong></span>
 				</li>
 				<li>
-					<a href="https://github.com/fogbender/b2b-saaskit">⭐ our open-source repo</a>
-				</li>
-			</ol>
-		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			<div>
-				The kit combines several open-source libraries with a handful of commercial
-				services&mdash;all featuring generous free-forever starter plans&mdash;to spin up a
-				functional multiplayer (i.e., team-based) application:
-			</div>
-			<ul class="ml-7 list-disc">
-				<li>
-					<a href="https://astro.build/">Astro</a>, an open-source website assembly framework
-				</li>
-				<li>
-					<a href="https://react.dev/">React</a>, an open-source front-end library
-				</li>
-				<li>
-					<a href="https://tailwindcss.com/">Tailwind CSS</a>, an open-source CSS framework
-				</li>
-				<li>
-					<a href="https://doppler.com/">Doppler</a>, a commercial secrets management service
-				</li>
-				<li>
-					<a href="https://propelauth.com/">PropelAuth</a>, a commercial managed user authentication
-					service with focus on B2B
-				</li>
-				<li>
-					<a href="https://supabase.com/">Supabase</a>, an open-source, commercial database service
-				</li>
-				<li>
-					<a href="https://stripe.com/">Stripe</a>, a commercial payments service
-				</li>
-				<li>
-					<a href="https://posthog.com/">PostHog</a>, an open-source, commercial product analytics
-					service
-				</li>
-				<li>
-					<a href="https://fogbender.com/">Fogbender</a>, commercial customer support software with
-					focus on B2B
-				</li>
-				<li>
-					<a href="https://vercel.com/">Vercel</a>, a commercial hosting and deployment service
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z" />
+							<path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
+						</svg>
+					</span>
+					<span>File sharing</span>
 				</li>
 			</ul>
+			<button class="button">
+				<a href="/dashboard">
+				Login or signup
+				</a>
+			</button>
 		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			Some of these libraries and services are necessary, others can be can <a href="/eject"
-				>ejected</a
-			>.
-		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			Getting help: <a href="https://github.com/fogbender/b2b-saaskit/issues/new"
-				>open an issue on GitHub</a
-			> or ping <a href="https://twitter.com/jlarky">@JLarky</a> and <a
-				href="https://twitter.com/abs">@abs</a
-			> on Twitter
-		</div>
+	</article>
+	<article class="information [ card ]">
+		<h2 class="title">The only HR tool you need to track applicants</h2>
+		<p class="info">Always keep updated with this simple tool on the go, when and where ever you need.</p>
+		<dl class="details">
+			<div>
+				<dt>Satisfaction</dt>
+				<dd>100%</dd>
+			</div>
+			<div>
+				<dt>Jobs</dt>
+				<dd>unlimited</dd>
+			</div>
+		</dl>
+	</article>
+</div>
 
 		<style>
-			a {
-				color: #0029ff;
-				text-decoration: underline;
-			}
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
 
-			a:visited {
-				color: #bc48d9;
-			}
+:root {
+  --c-white: #fff;
+  --c-black: #000;
+  --c-ash: #eaeef6;
+  --c-charcoal: #a0a0a0;
+  --c-void: #141b22;
+  --c-fair-pink: #FFEDEC;
+  --c-apricot: #FBC8BE;
+  --c-coffee: #754D42;
+  --c-del-rio: #917072;
+  --c-java: #1FCAC5;
+  --c-titan-white: #f1eeff;
+  --c-cold-purple: #a69fd6;
+  --c-indigo: #6558d3;
+  --c-governor: #4133B7;
+}
+
+body {
+  font-family: "Spline Sans", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: var(--c-ash);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 10vh auto;
+}
+
+.card {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+  max-width: 300px;
+}
+
+.information {
+  background-color: var(--c-white);
+  padding: 1.5rem;
+}
+.information .tag {
+  display: inline-block;
+  background-color: var(--c-titan-white);
+  color: var(--c-indigo);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5em 0.75em;
+  line-height: 1;
+  border-radius: 6px;
+}
+.information .tag + * {
+  margin-top: 1rem;
+}
+.information .title {
+  font-size: 1.5rem;
+  color: var(--c-void);
+  line-height: 1.25;
+}
+.information .title + * {
+  margin-top: 1rem;
+}
+.information .info {
+  color: var(--c-charcoal);
+}
+.information .info + * {
+  margin-top: 1.25rem;
+}
+.information .button {
+  font: inherit;
+  line-height: 1;
+  background-color: var(--c-white);
+  border: 2px solid var(--c-indigo);
+  color: var(--c-indigo);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.information .button:hover, .information .button:focus {
+  background-color: var(--c-indigo);
+  color: var(--c-white);
+}
+.information .details {
+  display: flex;
+  gap: 1rem;
+}
+.information .details div {
+  padding: 0.75em 1em;
+  background-color: var(--c-titan-white);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.125em;
+  flex-basis: 50%;
+}
+.information .details dt {
+  font-size: 0.875rem;
+  color: var(--c-cold-purple);
+}
+.information .details dd {
+  color: var(--c-indigo);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.plan {
+  padding: 10px;
+  background-color: var(--c-white);
+  color: var(--c-del-rio);
+}
+.plan strong {
+  font-weight: 600;
+  color: var(--c-coffee);
+}
+.plan .inner {
+  padding: 20px;
+  padding-top: 40px;
+  background-color: var(--c-fair-pink);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--c-apricot);
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-coffee);
+}
+.plan .pricing small {
+  color: var(--c-del-rio);
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+.plan .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--c-coffee);
+}
+.plan .title + * {
+  margin-top: 0.75rem;
+}
+.plan .info + * {
+  margin-top: 1rem;
+}
+.plan .features {
+  display: flex;
+  flex-direction: column;
+}
+.plan .features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.plan .features li + * {
+  margin-top: 0.75rem;
+}
+.plan .features .icon {
+  background-color: var(--c-java);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+.plan .features + * {
+  margin-top: 1.25rem;
+}
+.plan button {
+  font: inherit;
+  background-color: var(--c-indigo);
+  border-radius: 6px;
+  color: var(--c-white);
+  font-weight: 500;
+  font-size: 1.125rem;
+  width: 100%;
+  border: 0;
+  padding: 1em;
+}
+.plan button:hover, .plan button:focus {
+  background-color: var(--c-governor);
+}
 		</style>
 	</main>
 </Layout>

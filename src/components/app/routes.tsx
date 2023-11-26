@@ -34,7 +34,7 @@ export const routes: RemixBrowserContext & RouteObject[] = [
 		},
 	},
 	{
-		path: '/app',
+		path: '/dashboard',
 		Component() {
 			const key = useAtomValue(propelAuthAtom);
 			return (
@@ -54,7 +54,7 @@ export const routes: RemixBrowserContext & RouteObject[] = [
 				},
 			},
 			{
-				path: '/app/prompts',
+				path: '/dashboard/prompts',
 				loader: async ({ context }) => {
 					// pre-fetch in SSR
 					await context?.helpers.prompts.getPrompts.prefetch({});
@@ -67,7 +67,7 @@ export const routes: RemixBrowserContext & RouteObject[] = [
 				},
 			},
 			{
-				path: '/app/prompts/:promptId',
+				path: '/dashboard/prompts/:promptId',
 				loader: async ({ context, params }) => {
 					const promptId = params.promptId;
 					if (promptId) {
@@ -83,25 +83,25 @@ export const routes: RemixBrowserContext & RouteObject[] = [
 				},
 			},
 			{
-				path: '/app/prompts/:promptId/edit',
+				path: '/dashboard/prompts/:promptId/edit',
 				Component() {
 					return <EditPrompt />;
 				},
 			},
 			{
-				path: '/app/prompts/create',
+				path: '/dashboard/prompts/create',
 				Component() {
 					return <CreatePrompt />;
 				},
 			},
 			{
-				path: '/app/settings',
+				path: '/dashboard/settings',
 				Component() {
 					return <Settings />;
 				},
 			},
 			{
-				path: '/app/support',
+				path: '/dashboard/support',
 				Component() {
 					return <FullPageSupport />;
 				},

@@ -59,18 +59,18 @@ export function AppNav(this: any) {
 			<div className="container mx-auto flex items-center justify-between text-xs sm:text-sm">
 				{user?.email ? (
 					<nav className="flex flex-wrap space-x-2 sm:space-x-4">
-						<NavLink to="/app" end className={navLinkClass}>
+						<NavLink to="/dashboard" end className={navLinkClass}>
 							Overview
 						</NavLink>
-						<NavLink to="/app/prompts" className={navLinkClass}>
+						<NavLink to="/dashboard/prompts" className={navLinkClass}>
 							Prompts
 						</NavLink>
-						<NavLink to="/app/settings" className={navLinkClass}>
+						<NavLink to="/dashboard/settings" className={navLinkClass}>
 							Settings
 						</NavLink>
-						<NavLink to="/app/support" className={navLinkClassSupport}>
+						<NavLink to="/dashboard/support" className={navLinkClassSupport}>
 							Support
-							{path !== '/app/support' && <SupportWidget kind="badge" />}
+							{path !== '/dashboard/support' && <SupportWidget kind="badge" />}
 						</NavLink>
 					</nav>
 				) : (

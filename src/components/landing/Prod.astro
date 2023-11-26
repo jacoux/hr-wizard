@@ -1,86 +1,311 @@
 ---
-import b2b7logo from '../../assets/b2b7.svg?url';
-import free from '../../assets/free.svg?url';
 import { websiteTitle } from '../../constants';
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout
-	title={websiteTitle}
-	description="A new way to collaborate on GPT prompts with friends or colleagues (b2bsaaskit.com showcase)"
->
-	<main class="container max-w-[40rem] px-8 pb-12 md:mx-auto md:px-0">
-		<div class="mt-28 flex items-center gap-6">
-			<div class="w-[5.75rem]">
-				<img class="h-[5.75rem] w-[5.75rem]" src={b2b7logo} alt="B2B7 Logo" />
+<Layout title={'Set up your own ' + websiteTitle}>
+	<div class="cards">
+		<article class="information [ card ]">
+			<span class="tag">HR wizard</span>
+			<h2 class="title">The best applicant system</h2>
+			<p class="info">
+				Create unlimited jobs, connect with your own site and view unlimited candidates.
+			</p>
+			<button class="button">
+				<span>Learn more</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 0 24 24"
+					width="24px"
+					fill="none"
+				>
+					<path d="M0 0h24v24H0V0z" fill="none"></path>
+					<path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor"></path>
+				</svg>
+			</button>
+		</article>
+		<article class="plan [ card ]">
+			<div class="inner">
+				<span class="pricing">
+					<span>
+						$56 <small>/ m</small>
+					</span>
+				</span>
+				<h2 class="title">Professional</h2>
+				<p class="info">
+					This plan is for those who have a team already and running a large business.
+				</p>
+				<ul class="features">
+					<li>
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z"></path>
+								<path
+									d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+									fill="currentColor"></path>
+							</svg>
+						</span>
+						<span><strong>20</strong> team members</span>
+					</li>
+					<li>
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z"></path>
+								<path
+									d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+									fill="currentColor"></path>
+							</svg>
+						</span>
+						<span>Plan <strong>team meetings</strong></span>
+					</li>
+					<li>
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z"></path>
+								<path
+									d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+									fill="currentColor"></path>
+							</svg>
+						</span>
+						<span>File sharing</span>
+					</li>
+				</ul>
+				<button class="button">
+					<a href="/dashboard"> Login or signup</a>
+				</button>
 			</div>
-			<div class="flex flex-col">
-				<span class="text-4xl font-bold uppercase">Prompts</span>
-				<span class="text-2xl italic">with friends</span>
-			</div>
-		</div>
+		</article>
+		<article class="information [ card ]">
+			<h2 class="title">The only HR tool you need to track applicants</h2>
+			<p class="info">
+				Always keep updated with this simple tool on the go, when and where ever you need.
+			</p>
+			<dl class="details">
+				<div>
+					<dt>Satisfaction</dt>
+					<dd>100%</dd>
+				</div>
+				<div>
+					<dt>Jobs</dt>
+					<dd>unlimited</dd>
+				</div>
+			</dl>
+		</article>
+	</div>
 
-		<div class="ml-0 mt-16 text-[1.75rem] leading-8 md:ml-[7.25rem]">
-			Prompts with Friends is a new way to&nbsp;collaborate on GPT prompts with friends or
-			colleagues
-		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			This <a href="https://github.com/fogbender/b2b-saaskit">open-source</a> web application is a showcase
-			for the <a href="https://b2bsaaskit.com">B2B SaaS Kit</a>&mdash;a kit for assembling
-			multiplayer (i.e, team-based) SaaS applications by leveraging a combination of open-source and
-			commercial technologies.
-		</div>
-
-		<div class="mt-[3.75rem] flex gap-6">
-			<div class="flex min-w-fit justify-end md:min-w-[5.75rem]">
-				<img class="h-10 w-10" src={free} alt="Free as in beer" />
-			</div>
-			<div class="text-lg leading-[1.875rem]">
-				All commercial technologies used to build Prompts with Friends offer free-forever starter
-				plans&mdash;the upkeep of PromptsWithFriends.com is just $13 per year (the cost of the
-				domain name).
-			</div>
-		</div>
-
-		<div
-			class="group relative mx-auto mt-[3.75rem] flex items-center justify-center gap-6 md:ml-[7.25rem] md:justify-start"
-		>
-			<a
-				href="/app"
-				class="ignore-visited max-w-max bg-black px-8 py-2 text-lg uppercase text-white no-underline drop-shadow-[6px_6px_0_rgba(211,211,211) hover:text-yellow-300"
-			>
-				Get started
-			</a>
-			<div
-				class="hidden text-yellow-300 opacity-0 drop-shadow-[6px_6px_0_rgba(211,211,211)] transition-opacity duration-300 group-hover:opacity-100 md:block"
-			>
-				:)
-			</div>
-		</div>
-
-		<div class="ml-0 mt-[3.75rem] text-lg leading-[1.875rem] md:ml-[7.25rem]">
-			Getting help: <a href="https://github.com/fogbender/b2b-saaskit/issues/new"
-				>open an issue on GitHub</a
-			> or ping <a href="https://twitter.com/jlarky">@JLarky</a> and <a
-				href="https://twitter.com/abs">@abs</a
-			> on Twitter
-		</div>
-
-		<style>
-			a:not(.ignore-visited) {
-				color: #0029ff;
-				text-decoration: underline;
-			}
-
-			a:visited:not(.ignore-visited) {
-				color: #bc48d9;
-			}
-		</style>
-	</main>
-	<script>
-		if (window.location.origin === 'https://b2b-saaskit.vercel.app') {
-			window.location.href = 'https://b2bsaaskit.com';
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+		*,
+		*:after,
+		*:before {
+			box-sizing: border-box;
 		}
-	</script>
+
+		:root {
+			--c-white: #fff;
+			--c-black: #000;
+			--c-ash: #eaeef6;
+			--c-charcoal: #a0a0a0;
+			--c-void: #141b22;
+			--c-fair-pink: #ffedec;
+			--c-apricot: #fbc8be;
+			--c-coffee: #754d42;
+			--c-del-rio: #917072;
+			--c-java: #1fcac5;
+			--c-titan-white: #f1eeff;
+			--c-cold-purple: #a69fd6;
+			--c-indigo: #6558d3;
+			--c-governor: #4133b7;
+		}
+
+		body {
+			font-family: 'Spline Sans', sans-serif;
+			line-height: 1.5;
+			min-height: 100vh;
+			background-color: var(--c-ash);
+		}
+
+		.cards {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2.5rem;
+			width: 90%;
+			max-width: 1000px;
+			margin: 10vh auto;
+		}
+
+		.card {
+			border-radius: 16px;
+			box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+			max-width: 300px;
+		}
+
+		.information {
+			background-color: var(--c-white);
+			padding: 1.5rem;
+		}
+		.information .tag {
+			display: inline-block;
+			background-color: var(--c-titan-white);
+			color: var(--c-indigo);
+			font-weight: 600;
+			font-size: 0.875rem;
+			padding: 0.5em 0.75em;
+			line-height: 1;
+			border-radius: 6px;
+		}
+		.information .tag + * {
+			margin-top: 1rem;
+		}
+		.information .title {
+			font-size: 1.5rem;
+			color: var(--c-void);
+			line-height: 1.25;
+		}
+		.information .title + * {
+			margin-top: 1rem;
+		}
+		.information .info {
+			color: var(--c-charcoal);
+		}
+		.information .info + * {
+			margin-top: 1.25rem;
+		}
+		.information .button {
+			font: inherit;
+			line-height: 1;
+			background-color: var(--c-white);
+			border: 2px solid var(--c-indigo);
+			color: var(--c-indigo);
+			padding: 0.5em 1em;
+			border-radius: 6px;
+			font-weight: 500;
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.5rem;
+		}
+		.information .button:hover,
+		.information .button:focus {
+			background-color: var(--c-indigo);
+			color: var(--c-white);
+		}
+		.information .details {
+			display: flex;
+			gap: 1rem;
+		}
+		.information .details div {
+			padding: 0.75em 1em;
+			background-color: var(--c-titan-white);
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 0.125em;
+			flex-basis: 50%;
+		}
+		.information .details dt {
+			font-size: 0.875rem;
+			color: var(--c-cold-purple);
+		}
+		.information .details dd {
+			color: var(--c-indigo);
+			font-weight: 600;
+			font-size: 1.25rem;
+		}
+
+		.plan {
+			padding: 10px;
+			background-color: var(--c-white);
+			color: var(--c-del-rio);
+		}
+		.plan strong {
+			font-weight: 600;
+			color: var(--c-coffee);
+		}
+		.plan .inner {
+			padding: 20px;
+			padding-top: 40px;
+			background-color: var(--c-fair-pink);
+			border-radius: 12px;
+			position: relative;
+			overflow: hidden;
+		}
+		.plan .pricing {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: var(--c-apricot);
+			border-radius: 99em 0 0 99em;
+			display: flex;
+			align-items: center;
+			padding: 0.625em 0.75em;
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: var(--c-coffee);
+		}
+		.plan .pricing small {
+			color: var(--c-del-rio);
+			font-size: 0.75em;
+			margin-left: 0.25em;
+		}
+		.plan .title {
+			font-weight: 600;
+			font-size: 1.25rem;
+			color: var(--c-coffee);
+		}
+		.plan .title + * {
+			margin-top: 0.75rem;
+		}
+		.plan .info + * {
+			margin-top: 1rem;
+		}
+		.plan .features {
+			display: flex;
+			flex-direction: column;
+		}
+		.plan .features li {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		.plan .features li + * {
+			margin-top: 0.75rem;
+		}
+		.plan .features .icon {
+			background-color: var(--c-java);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--c-white);
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+		}
+		.plan .features .icon svg {
+			width: 14px;
+			height: 14px;
+		}
+		.plan .features + * {
+			margin-top: 1.25rem;
+		}
+		.plan button {
+			font: inherit;
+			background-color: var(--c-indigo);
+			border-radius: 6px;
+			color: var(--c-white);
+			font-weight: 500;
+			font-size: 1.125rem;
+			width: 100%;
+			border: 0;
+			padding: 1em;
+		}
+		.plan button:hover,
+		.plan button:focus {
+			background-color: var(--c-governor);
+		}
+	</style>
 </Layout>

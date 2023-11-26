@@ -109,7 +109,7 @@ export const promptsRouter = createTRPCRouter({
 					tags: validTags.success ? validTags.data : [],
 				},
 				author,
-				shareUrl: new URL(ctx.req.url).origin + '/app/prompts/' + prompt.promptId,
+				shareUrl: new URL(ctx.req.url).origin + '/dashboard/prompts/' + prompt.promptId,
 				publicUrl: new URL(ctx.req.url).origin + '/prompts/' + prompt.promptId,
 			};
 		}),

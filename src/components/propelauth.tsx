@@ -22,8 +22,8 @@ export function useRequireActiveOrg() {
 	useEffect(() => {
 		if (auth.loading === false) {
 			if (!auth.user || !activeOrg) {
-				if (window.location.pathname !== '/app') {
-					window.location.pathname = '/app';
+				if (window.location.pathname !== '/dashboard') {
+					window.location.pathname = '/dashboard';
 				}
 			}
 		}

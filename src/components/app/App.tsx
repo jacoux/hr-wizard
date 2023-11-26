@@ -185,12 +185,12 @@ const AppWithOrg = () => {
 				)}
 				<div className="mt-4 text-center">
 					<NavLink
-						to="/app/dashboard"
+						to="/dashboard"
 						className={({ isPending }) =>
 							clsx('rounded  px-4 py-2 text-white', isPending ? 'bg-indigo-600' : 'bg-indigo-500')
 						}
 					>
-						Go to dashboard
+						Go to all jobs in this organization
 					</NavLink>
 				</div>
 			</>
