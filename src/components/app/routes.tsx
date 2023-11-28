@@ -11,6 +11,7 @@ import type { RouterUtils } from '../trpc';
 import { App } from './App';
 import { CreatePrompt } from './CreatePrompt';
 import { EditPrompt } from './EditPrompt';
+import { Jobs } from './jobs/Jobs';
 import { AppNav } from './Nav';
 import { Prompt } from './Prompt';
 import { Prompts } from './Prompts';
@@ -64,6 +65,19 @@ export const routes: RemixBrowserContext & RouteObject[] = [
 				},
 				Component() {
 					return <Prompts />;
+				},
+			},
+			{
+				path: '/dashboard/jobs',
+				loader: async ({ context }) => {
+					// pre-fetch in SSR
+					await context?.helpers.prompts.getPrompts.prefetch({});
+					// pre-fetch in browser
+					await routes.trpcUtils?.prompts.getPrompts.ensureData({}).catch(() => {});
+					return null;
+				},
+				Component() {
+					return <Jobs />;
 				},
 			},
 			{

@@ -16,6 +16,7 @@ export const appRouter = createTRPCRouter({
 	hello: helloRouter,
 	auth: authRouter,
 	prompts: promptsRouter,
+	jobs: promptsRouter,
 	settings: settingsRouter,
 	surveys: surveysRouter,
 });

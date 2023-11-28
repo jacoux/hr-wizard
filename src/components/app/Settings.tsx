@@ -110,7 +110,7 @@ export function Settings() {
 										className="text-blue-700 underline visited:text-purple-600 hover:text-rose-600"
 										href={env.PUBLIC_AUTH_URL + '/org'}
 									>
-										Prompts with Friends organization
+										HR wizard organization
 									</a>{' '}
 									to run OpenAI calls against your OpenAI account budget.
 								</p>
@@ -200,7 +200,7 @@ export function Settings() {
 							<div className="flex flex-col">
 								<h2 className="text-lg font-medium">Org-wide OpenAI key</h2>
 								<p className="text-sm text-gray-600">
-									By using this app, everyone in your Prompts with Friends organization can use the
+									By using this app, everyone in your HR wizard organization can use the
 									OpenAI budget associated with this key
 								</p>
 							</div>

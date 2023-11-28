@@ -75,7 +75,7 @@ yarn
 yarn dev
 ```
 
-3. Open http://localhost:3000 in a browser tab - you should see a page titled "Welcome to Prompts with Friends"
+3. Open http://localhost:3000 in a browser tab - you should see a page titled "Welcome to HR wizard"
 
 4. You'll find detailed configuration instructions on http://localhost:3000/setup. Once you're here -
 

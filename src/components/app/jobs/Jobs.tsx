@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
-import { websiteTitle } from '../../constants';
-import { useRequireActiveOrg } from '../propelauth';
-import { trpc } from '../trpc';
-import { Layout } from './Layout';
+import { websiteTitle } from '../../../constants';
+import { useRequireActiveOrg } from '../../propelauth';
+import { trpc } from '../../trpc';
+import { Layout } from '../Layout';
 
-export function Prompts() {
+export function Jobs() {
 	const trpcUtils = trpc.useContext();
 
 	const { auth, activeOrg } = useRequireActiveOrg();
@@ -46,15 +46,15 @@ export function Prompts() {
 	});
 
 	return (
-		<Layout title={`${websiteTitle} / Prompts`}>
+		<Layout title={`${websiteTitle} / Jobs`}>
 			<div className="mt-4 flex flex-col gap-10 rounded-md border border-gray-300 px-4 py-8 sm:px-6 lg:px-8">
 				<div className="">
 					<Link
-						to="/dashboard/prompts/create"
+						to="/dashboard/jobs/create"
 						type="button"
 						className="rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 					>
-						Create a prompt
+						Create a job
 					</Link>
 				</div>
 
@@ -92,7 +92,7 @@ export function Prompts() {
 							>
 								<td className="break-all py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">
 									<Link
-										to={`/dashboard/prompts/${prompt.promptId}`}
+										to={`/dashboard/jobs/${prompt.promptId}`}
 										className="text-indigo-600 underline hover:text-indigo-900"
 									>
 										{prompt.title}
@@ -105,7 +105,7 @@ export function Prompts() {
 								</td>
 								<td className="relative flex flex-col items-start gap-2 whitespace-nowrap break-all py-4 pl-3 pr-4 text-right text-sm font-medium sm:flex-row sm:gap-6 sm:pr-6 lg:pr-8">
 									<Link
-										to={`/dashboard/prompts/${prompt.promptId}/edit`}
+										to={`/dashboard/jobs/${prompt.promptId}/edit`}
 										className="text-indigo-600 hover:text-indigo-900"
 									>
 										Edit<span className="sr-only">, prompt</span>
@@ -145,7 +145,7 @@ const Table = ({ children }: { children: React.ReactNode }) => {
 									scope="col"
 									className="-rotate-90 pb-8 text-sm font-semibold text-gray-900 sm:rotate-0 sm:break-all sm:pb-2 sm:text-left"
 								>
-									Prompt
+									Job
 								</th>
 								<th
 									scope="col"

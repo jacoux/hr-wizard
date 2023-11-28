@@ -2,14 +2,14 @@ import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
-import { websiteTitle } from '../../constants';
-import type { PromptPrivacyLevel } from '../../lib/trpc/routers/prompts';
-import { type RouterOutput, trpc } from '../trpc';
-import { Layout } from './Layout';
-import { usePromptErrorPage } from './usePromptErrorPage';
-import { type Message, resolveTemplates, useRedirectToLoginPage } from './utils';
+import { websiteTitle } from '../../../constants';
+import type { PromptPrivacyLevel } from '../../../lib/trpc/routers/prompts';
+import { type RouterOutput, trpc } from '../../trpc';
+import { Layout } from '../Layout';
+import { usePromptErrorPage } from '../usePromptErrorPage';
+import { type Message, resolveTemplates, useRedirectToLoginPage } from '../utils';
 
-export function Prompt() {
+export function Job() {
 	const navigate = useNavigate();
 	const { redirectToLogin } = useRedirectToLoginPage();
 	const { promptId } = useParams<{ promptId: string }>();
@@ -75,7 +75,7 @@ export function Prompt() {
 					{data?.canEdit && (
 						<Link
 							className="font-medium text-blue-700 hover:text-rose-600 disabled:opacity-50"
-							to={`/dashboard/prompts/${promptId}/edit`}
+							to={`/dashboard/jobs/${promptId}/edit`}
 						>
 							Edit
 						</Link>
@@ -159,7 +159,7 @@ export function Prompt() {
 					<button
 						className="font-medium text-blue-700 hover:text-rose-600 disabled:opacity-50"
 						onClick={() => {
-							navigate('/dashboard/prompts/create', { state: { prompt: data?.prompt } });
+							navigate('/dashboard/jobs/create', { state: { prompt: data?.prompt } });
 						}}
 					>
 						Fork prompt

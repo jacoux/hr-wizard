@@ -48,7 +48,7 @@ Note that a custom domain is required for making PropelAuth work with Safari.
 
 1. You going to see two URLs in the "Authorized redirect URIs" section. Copy the second one that looks like https://auth.yourdomain.com/github/callback, this URL is going to be used in the next step.
 
-1. Open <a href="https://github.com/settings/developers">https://github.com/settings/developers</a>, select "Prompts with Friends" application, then click on it.
+1. Open <a href="https://github.com/settings/developers">https://github.com/settings/developers</a>, select "HR wizard" application, then click on it.
 
 1. Set "Homepage URL" to `https://auth.yourdomain.com` (replace `yourdomain.com` with your domain name)
 

@@ -3,7 +3,7 @@ title: "Production deployment to Vercel"
 needsEnv: ["PROD"]
 ---
 
-At this point, Prompts with Friends is fully configured on your machine! You can check it out here: <a href="http://localhost:3000/app" >http://localhost:3000/app</a>.
+At this point, HR wizard is fully configured on your machine! You can check it out here: <a href="http://localhost:3000/app" >http://localhost:3000/app</a>.
 
 Except for the data, you should see the exact same app we have running on <a href="https://promptswithfriends.com/app" >https://promptswithfirends.com/app</a>.
 
@@ -51,7 +51,7 @@ Note that the Supabase free tier has a limit of 2 projects.
 
 1. Open <a href="https://github.com/settings/developers">https://github.com/settings/developers</a>, click on "New OAuth App", and fill in the form:
 
-   - "Application name" - "Prompts with Friends"
+   - "Application name" - "HR wizard"
    - "Homepage URL" - `https://[subdomain].vercel.app`
    - "Authorization callback URL" - paste the value from the previous step
 

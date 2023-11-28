@@ -13,7 +13,7 @@ In this step, we'll configure authentication with GitHub. Using GitHub as an OAu
 
 1. Open <a href="https://github.com/settings/developers">https://github.com/settings/developers</a>, click on "New OAuth App" or "Register a new application", and fill in the form:
 
-   - Application name: "Prompts with Friends localhost"
+   - Application name: "HR wizard localhost"
    - Homepage URL: `http://localhost:3000`
    - Authorization callback URL: paste the Authorized redirect URL value from the previous step
 

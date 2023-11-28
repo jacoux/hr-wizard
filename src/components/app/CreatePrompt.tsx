@@ -267,7 +267,7 @@ export const EditPromptControls = ({
 			queryClient.invalidateQueries(getQueryKey(trpc.prompts.getPrompts));
 		},
 		onSuccess: (promptId) => {
-			navigate(`/app/prompts/${promptId}`);
+			navigate(`/dashboard/prompts/${promptId}`);
 		},
 	});
 	const [saved, setSaved] = useState<string>();
@@ -285,7 +285,7 @@ export const EditPromptControls = ({
 
 	const deletePromptMutation = trpc.prompts.deletePrompt.useMutation({
 		onSuccess: () => {
-			navigate(`/app/prompts`);
+			navigate(`/dashboard/prompts`);
 		},
 		onSettled: () => {
 			queryClient.invalidateQueries(getQueryKey(trpc.prompts.getPrompts));
